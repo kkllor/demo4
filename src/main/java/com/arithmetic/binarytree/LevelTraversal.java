@@ -11,14 +11,6 @@ import java.util.Queue;
  */
 public class LevelTraversal {
     public static void main(String[] args) {
-
-        //12345678
-
-        /**
-         *          1
-         *
-         *
-         */
         int[] buildArray = new int[]{1, 2, 3, 4, 0, 5, 6, 7, 8};
         BinaryTree<Integer> root = build(buildArray);
         levelTraversals(root);
