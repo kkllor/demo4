@@ -1,5 +1,7 @@
 package com.arithmetic;
 
+import java.util.Stack;
+
 /**
  * @author kkllor
  * @date 2020/12/6 8:16 PM
@@ -20,7 +22,7 @@ public class ReverseLink {
         }
         node = rootNode;
         printNode(node);
-        reverseNode(rootNode);
+        reverseNode3(rootNode);
     }
 
     private static void printNode(Node<Integer> root) {
@@ -65,6 +67,24 @@ public class ReverseLink {
         travels(node.next);
         node.next.next = node;
         node.next = null;
+    }
+
+
+    private static void reverseNode3(Node<Integer> node) {
+        Stack<Node> stack = new Stack<>();
+        while (node != null) {
+            stack.add(node);
+            node = node.next;
+        }
+
+        Node current = stack.pop();
+        Node pre;
+        while (!stack.isEmpty()) {
+            pre = stack.pop();
+            current.next = pre;
+            pre.next = null;
+            current = pre;
+        }
     }
 
 

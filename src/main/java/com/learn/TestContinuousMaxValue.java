@@ -7,7 +7,7 @@ package com.learn;
 public class TestContinuousMaxValue {
 
     public static void main(String[] args) {
-        int[] array = new int[]{-2, 2, 3, -4, 7, 4, -1, -2, 1, -2, -3, 12, -2, 1};
+        int[] array = new int[]{-2, 2, -3, -4, 7, 4, -1, -2, 1, -2, -3, 12, -2, 1};
         System.out.println(findMax(array));
     }
 
