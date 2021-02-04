@@ -5,6 +5,8 @@ package com.arithmetic;
  * @date 2021/1/10 5:11 PM
  */
 public class lc10 {
+
+
     public static void main(String[] args) {
         isMatch("", "*");
     }
