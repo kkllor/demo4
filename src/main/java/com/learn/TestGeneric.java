@@ -9,26 +9,26 @@ import java.util.List;
  */
 public class TestGeneric {
 
-    public static class Animal {
+    public static class Animal<T> {
+        private T extra;
 
-    }
+        public T getExtra() {
+            return extra;
+        }
 
-    public static class Human extends Animal {
-        protected String getHairColor() {
-            return "grey";
+        public void setExtra(T extra) {
+            this.extra = extra;
         }
     }
 
-    public static class Asia extends Human {
-
-    }
-
-
-    public static class Africa extends Human {
-
+    public static class Chicken extends Animal<String>{
+        @Override
+        public String getExtra() {
+            return super.getExtra();
+        }
     }
 
     public static void main(String[] args) {
-        List<? super Human> list = new ArrayList<Animal>();
+
     }
 }

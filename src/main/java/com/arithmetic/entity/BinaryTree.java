@@ -58,6 +58,8 @@ public class BinaryTree<T> {
                 BinaryTree<T> left = new BinaryTree<>(v);
                 node.setLeft(left);
                 queue.add(left);
+            } else {
+                queue.add(null);
             }
             index++;
 
@@ -65,6 +67,8 @@ public class BinaryTree<T> {
                 BinaryTree<T> right = new BinaryTree<>(v);
                 node.setRight(right);
                 queue.add(right);
+            } else {
+                queue.add(null);
             }
             index++;
         }
