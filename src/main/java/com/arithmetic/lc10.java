@@ -21,8 +21,6 @@ public class lc10 {
             if (p.charAt(j - 1) != '*') continue;
             else dp[0][j] = dp[0][j - 2];
         }
-
-
         return false;
     }
 }

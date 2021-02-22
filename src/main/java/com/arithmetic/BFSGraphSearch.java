@@ -20,7 +20,7 @@ public class BFSGraphSearch {
         graph.addEdge(5, 9);
         graph.addEdge(2, 1);
         graph.addEdge(2, 3);
-        System.out.println(bfs(graph, 4, 0));
+        System.out.println(bfs(graph, 4, 1));
     }
 
     public static Set<Integer> bfs(Graph graph, int index, int degree) {

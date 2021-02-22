@@ -7,7 +7,7 @@ package com.arithmetic;
 public class DpCoin {
     //1,3,5
     public static void main(String[] args) {
-        int result = solution(9);
+        int result = solution(23);
         System.out.println();
         System.out.println("result = " + result);
     }
