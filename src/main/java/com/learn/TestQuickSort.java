@@ -17,22 +17,23 @@ public class TestQuickSort {
         if (start >= end) {
             return;
         }
-        int partitionIndex = partition(array, start, end);
-        quickSort(array, start, partitionIndex - 1);
-        quickSort(array, partitionIndex + 1, end);
+
+        int pivotIndex = partition(array, start, end);
+        quickSort(array, start, pivotIndex - 1);
+        quickSort(array, pivotIndex + 1, end);
     }
 
-    private static int partition(int[] array, int start, int end) {
-        int target = array[end];
-        int i = start;
-        for (int j = start; j < end; j++) {
-            if (array[j] < target) {
-                swap(array, i, j);
-                i++;
+    public static int partition(int[] array, int start, int end) {
+        int pivot = array[end];
+        int index = start;
+        for (int i = start; i < end; i++) {
+            if (array[i] < pivot) {
+                swap(array, i, index);
+                index++;
             }
         }
-        swap(array, i, end);
-        return i;
+        swap(array, index, end);
+        return index;
     }
 
     private static void swap(int[] array, int from, int to) {
