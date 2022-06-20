@@ -14,7 +14,7 @@ import java.util.Stack;
 public class jz06 {
     public static void main(String[] args) {
 //        System.out.println(Arrays.toString(reversePrint1(ListNode.from(new int[]{1, 2, 3}))));
-        System.out.println(reverseNode2(ListNode.from(new int[]{1, 2, 3})));
+        System.out.println( reverseNode2(ListNode.from(new int[]{1, 2, 3, 4, 5, 6})));
     }
 
     public static int[] reversePrint(ListNode head) {
@@ -72,15 +72,14 @@ public class jz06 {
         return head;
     }
 
-
-//1->2->3->4->5
+    //1->2->3->4->5->6
     public static ListNode reverseNode2(ListNode head) {
-        if(head.next == null){
+        if (head.next == null) {
             return head;
         }
-        ListNode node = reverseNode2(head.next);
+        ListNode newRoot = reverseNode2(head.next);
         head.next.next = head;
         head.next = null;
-        return node;
+        return newRoot;
     }
 }

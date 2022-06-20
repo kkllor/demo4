@@ -17,7 +17,6 @@ public class TestQuickSort {
         if (start >= end) {
             return;
         }
-
         int pivotIndex = partition(array, start, end);
         quickSort(array, start, pivotIndex - 1);
         quickSort(array, pivotIndex + 1, end);
